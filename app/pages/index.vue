@@ -207,9 +207,9 @@ const scrollToAbout = () => {
       </div>
     </transition>
 
-    <section class="relative min-h-screen">
+    <section class="relative min-h-[100svh] h-[100svh] md:min-h-screen md:h-auto">
       <div
-        class="pointer-events-none absolute inset-x-0 top-[-10vh] h-[120vh] bg-fixed bg-cover opacity-95 will-change-transform"
+        class="pointer-events-none absolute inset-x-0 top-[-10vh] h-[120vh] md:bg-fixed bg-cover opacity-95 will-change-transform"
         :style="{
           transform: backgroundOffset,
           backgroundImage: 'url(/images/pegunungan-hero.jpg)',
@@ -231,10 +231,10 @@ const scrollToAbout = () => {
 
       <div class="pointer-events-none absolute inset-x-0 bottom-0 h-[45vh] bg-gradient-to-b from-transparent via-slate-950/55 to-slate-950/85" />
 
-      <div class="relative z-10">
-        <div class="pointer-events-none absolute inset-0 bg-gradient-to-r from-slate-950/70 via-slate-950/30 to-transparent" />
-        <div class="pointer-events-none absolute inset-0 hero-vignette" />
+      <div class="pointer-events-none absolute inset-0 z-[2] bg-gradient-to-r from-slate-950/70 via-slate-950/30 to-transparent" />
+      <div class="pointer-events-none absolute inset-0 z-[3] hero-vignette" />
 
+      <div class="relative z-10">
         <UContainer class="relative pt-24 pb-16 px-4 sm:px-6 sm:pt-28 sm:pb-20 md:pt-36 md:pb-28">
           <div class="hero-content-block relative flex flex-col gap-6 sm:gap-8 md:gap-10 max-w-2xl">
             <div
@@ -385,21 +385,13 @@ const scrollToAbout = () => {
 }
 
 .hero-title {
-  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.4), 0 0 1px rgba(0, 0, 0, 0.3);
+  text-shadow:
+    0 4px 28px rgba(0, 0, 0, 0.55),
+    0 0 1px rgba(0, 0, 0, 0.35);
 }
 
 .hero-title-gradient {
-  background: linear-gradient(
-    135deg,
-    #fff 0%,
-    #f0fdf4 35%,
-    #ecfdf5 50%,
-    #d1fae5 70%,
-    #fff 100%
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  color: #fdfdfd;
 }
 
 .hero-badge-float {
